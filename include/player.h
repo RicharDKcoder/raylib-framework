@@ -20,6 +20,8 @@ class Player
     void PhysicsProcess(float lastFrameTime);
 
   private:
+    // 坐标位置
+    Vector2 point;
     // 贴图
     Texture2D texture;
     // 轮廓
