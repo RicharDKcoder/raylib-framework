@@ -3,6 +3,7 @@
 
 Player::Player()
 {
+    this->OnReady();
 }
 
 Player::~Player()
@@ -11,12 +12,14 @@ Player::~Player()
 
 void Player::OnReady()
 {
-    this->point = Vector2{0, 0};
+    this->point = Vector2{100, 100};
+    this->texture = LoadTexture("resources/characters/player.png");
 }
 
 void Player::Process(float lastFrameTime)
 {
-    DrawTexture(this->texture, this->point.x, this->point.y, WHITE);
+    // DrawTexture(this->texture, this->point.x, this->point.y, WHITE);
+    DrawTextureRec(this->texture, Rectangle{0, 0, 128, 128}, Vector2{this->point.x, this->point.y}, WHITE);
 }
 
 void Player::PhysicsProcess(float lastFrameTime)

@@ -11,7 +11,6 @@ class Player
     Player &operator=(const Player &) = default;
     ~Player();
 
-  protected:
     // 初始化
     void OnReady();
     // 处理
