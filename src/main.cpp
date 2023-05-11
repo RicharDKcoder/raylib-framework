@@ -6,7 +6,7 @@
 int main(void)
 {
 
-    Game game = Game();
+    Game game;
     game.Run();
     return 0;
 }

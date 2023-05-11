@@ -15,12 +15,14 @@ Game::Game()
 
 Game::~Game()
 {
+    delete this->player;
     CloseWindow(); // Close window and OpenGL context
 }
 
 void Game::Init()
 {
-    // this->player = Player();
+    // 初始化玩家对象
+    this->player = new Player();
 }
 
 void Game::Run()
@@ -41,11 +43,11 @@ void Game::Run()
 void Game::Process()
 {
     float lastFrameTime = GetFrameTime();
-    this->player.Process(lastFrameTime);
+    this->player->Process(lastFrameTime);
 }
 
 void Game::PhysicsProcess()
 {
     float lastFrameTime = GetFrameTime();
-    this->player.PhysicsProcess(lastFrameTime);
+    this->player->PhysicsProcess(lastFrameTime);
 }

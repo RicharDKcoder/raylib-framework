@@ -21,7 +21,8 @@ class Game
     void PhysicsProcess();
 
   private:
-    Player player;
+    // 玩家对象
+    Player *player;
 };
 
 #endif // !GAME_H_
